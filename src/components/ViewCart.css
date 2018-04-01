@@ -1,0 +1,17 @@
+.viewCart{
+    clear:both;
+    width:600px;
+    position:relative;
+    left:-390px;
+    border:1px solid #ccc;
+    margin-bottom: 5px;
+}
+.cartDetail{
+    clear:both;
+}
+.closeCart{
+    float:right;
+    border:1px solid #ccc;
+    padding:0px 4px;
+    margin:10px;
+}
