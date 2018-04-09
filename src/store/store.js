@@ -12,12 +12,13 @@ import * as asyncInitialState from 'redux-async-initial-state';
 const loadStore = (currentState) => {
     console.log(currentState);
     return new Promise(resolve => {
-        fetch('https://cors-anywhere.herokuapp.com/'+'http://101.183.25.249/products.json')
+        /*'https://cors-anywhere.herokuapp.com/'+'http://101.183.153.218/products.json'*/
+        fetch('http://localhost/products.json')
             .then(response => response.json())
             .then(products => {
                 resolve({ ...currentState,
                     products:products,
-                    cart:[]
+                    cart:localStorage.getItem('cart')?JSON.parse(localStorage.getItem('cart')):[]
                 })
             });
     });
