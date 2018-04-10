@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import ReactDOM from 'react-dom';
 import App from './App';
+import {Pro} from './containers/ProWrap';
 import Head from './components/Head';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store/store';
@@ -14,8 +15,7 @@ ReactDOM.render(
         <Router>
         <div>
                 <Route path='/' component={Head} />
-                <Route exact path='/' component={App} />
-                <Route exact path='/home' component={App} />
+                <Route exact path='/' component={Pro} />
         </div>
         </Router>
     </Provider>, document.getElementById('root'));
