@@ -1,0 +1,31 @@
+.prolist{
+  position: relative;
+}
+.subC{
+  display:none;
+  position: absolute;
+  left: 180px;
+  top: 0;
+  width:100vw;
+  height: 300px;
+  z-index: 99;
+  background-color: white;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto; 
+}
+.flex-ctn{
+  display:flex;
+  flex-wrap:wrap;
+}
+.children{
+  margin:5px 10px;
+}
+.cat-ctn{
+  padding:3px;
+  display:block;
+}
+.subC-ctn{
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+}
