@@ -21,3 +21,27 @@ export const delItem = e => {
         id:parseInt(e.target.parentNode.getAttribute('id')),
     }
 }
+
+export const filterPro= kw => {
+    return {
+        type:'filterPro',
+        keyword:kw,
+    }
+}
+
+export const selectCat = kw => {
+    console.log(kw)
+    return {
+        type:'selectCat',
+        keyword:kw
+    }
+}
+
+export const delSelectCat = kw => {
+    return {
+    type:'delSelectCat',
+    keyword: kw
+    }
+}
+
+
