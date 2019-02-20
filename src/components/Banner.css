@@ -1,0 +1,15 @@
+.banner{
+  background-color:#ff5000;
+  color:#fff;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding:10px 0 10px 0;
+}
+.bannerName, .searchBar{
+  margin:0 50px 0 10px;
+}
+.customizeBSC{
+  margin:0;
+}
