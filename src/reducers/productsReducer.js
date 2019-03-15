@@ -3,8 +3,7 @@
 
 
 const productsReducer = (state=[],action) => {
-    console.log(state);
-    if(action.type === "addToCart")
+    if(action.type === "addToCart"){
     return state.map(i=>{
         if(i.name===action.name) {
             return {...i,
@@ -13,7 +12,7 @@ const productsReducer = (state=[],action) => {
         }
         else return {...i};
     })
-    
+    }
     return state;
 }
 

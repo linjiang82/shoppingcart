@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 import Head from './components/Head';
-import ProWrap from './containers/ProWrap';
+import {Pro} from './containers/ProWrap';
 
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div>
         <Head />
-        <ProWrap />
+        <Pro />
       </div>
     );
   }

@@ -2,7 +2,9 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import './Prolist.css'
 import getProList from '../actions/proListActions'
+import {filterPro, clearKw, selectCat, delSelectCat} from '../actions/userActions'
 import {connect} from 'react-redux'
+import Adbanner from './carousel'
 var i=0;
 class Prolist extends Component {
   constructor(props){
@@ -12,7 +14,6 @@ class Prolist extends Component {
    getProList(this.props.dispatch) 
   }
   render(){
-    console.log(this.props.proList,i++)
     if(this.props.proList.error){
       return <div>Something went wrong!</div>
     }
@@ -25,34 +26,55 @@ class Prolist extends Component {
     let Prolist = this.props.proList.prolist;
     for (let idx in Prolist)
     { let currentCat = Prolist[idx]
-      let subC = [];
+      let brand = [];
       for (let idx in currentCat['sub-cat'])
       {
         let currentSubCat = currentCat['sub-cat'][idx];
-        let children = [];
+        let productName = [];
         
         for (let idx in currentSubCat.children){
-          children.push(<a href='#'><div className='children'>{currentSubCat.children[idx]}</div></a>)
+          productName.push(<a><div className='children' onClick={this.props.clickProduct}>{currentSubCat.children[idx]}</div></a>)
         }
-          subC.push(<div className='subC-ctn'>
+          brand.push(<div className='subC-ctn' onClick={this.props.clickBrand}>
             <a href='#'><span><strong>{currentSubCat['sub-cat-title']}</strong></span></a>
-            <div className='flex-ctn'>{children}</div>
+            <div className='flex-ctn' >{productName}</div>
             </div>)
       } 
-      cat.push(<div className='flex-ctn cat-ctn' onMouseOver={this.props.over} onMouseOut={this.props.out}>
-        <a href='#'><span><strong>{currentCat['cat-title']}&nbsp;&nbsp;&gt;</strong></span></a>
-        <div className='subC'>{subC}</div>
+      cat.push(<div className='flex-ctn cat-ctn' onMouseOver={this.props.over} onMouseOut={this.props.out} >
+        <a href='#'><span className='flex-ctn'><strong onClick={this.props.clickCat}>{currentCat['cat-title']}</strong><span className='most-right'>&nbsp;&nbsp;&gt;</span></span></a>
+        <div className='subC'>{brand}</div>
         </div>)
-    } 
+    }
+      let selectCat=[];
+      // this.props.proList.categoryKeyword.map(i=>
+      //   selectCat.push(<a className='selectCat' onClick={e=>this.props.delSelectCat(e)}>{i}<span className='btn-x'></span></a>)
+      // )
+      for( let [key,value] of Object.entries(this.props.proList.categoryKeyword)){
+        // console.log(key,value)
+        let kwArray=[];
+        value.map(i=>{
+          kwArray.push(<span onClick={this.props.delSelectCat}>&nbsp;{i}&nbsp;</span>)
+        })
+        selectCat.push(<span>[{key}:{kwArray}]</span>)
+      }
+    
+  
     
     return (
-      <ul className='prolist'>
-        {cat}
-      </ul>
+
+      <div className='prolist'>
+        <div className='categories'><strong><a>Categories&nbsp;&nbsp;&gt;</a></strong>{selectCat}</div>
+        
+        <ul className='list'>
+          {cat}
+        </ul>
+        <Adbanner className='adbanner'/>
+      </div>
     )
     }
   }
 }
+
 
 const mapStateToProps = (state) => {
   return {
@@ -70,7 +92,27 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     out: (e) => {
       e.stopPropagation();
       e.currentTarget.childNodes[1].style='display:none'
-      e.currentTarget.childNodes[0].style='color:black'
+      e.currentTarget.childNodes[0].style='color:#337ab7'
+    },
+    clickProduct: (e) => {
+      e.stopPropagation();
+      let keyword = e.currentTarget.firstChild.textContent;
+      dispatch(selectCat(`name:${keyword}`))
+    },
+    clickBrand: (e) => {
+      e.stopPropagation();
+      let keyword = e.currentTarget.firstChild.textContent;
+      dispatch(selectCat(`Brand:${keyword}`))
+    },
+    clickCat: (e) => {
+      e.stopPropagation();
+      let keyword = e.currentTarget.firstChild.textContent;
+      dispatch(selectCat(`Cat:${keyword}`))
+    },
+    delSelectCat: (e) => {
+      let keyword =`${e.target.parentNode.childNodes[4].textContent.trim()} ${e.target.textContent.trim()}`; 
+      console.log(keyword);
+      dispatch(delSelectCat(keyword))
     }
   }
 }

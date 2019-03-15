@@ -1,11 +1,43 @@
 .item{
     width:300px;
-    height:300px;
+    height:400px;
     float:left;
-    margin:10px;
+    margin:20px 10px;
+}
+.item:hover{
+    border:1px solid gainsboro;
+    cursor: pointer;
 }
 .description{
     position:relative;
-    top:-100px;
+    top:0px;
     left:100px;
+    width:100px;
+    text-align: center;
+    display:inline-block;
+    z-index: 1;
+}
+.special{
+    width:80px;
+    float:left;
+    height:60px;
+    background: url('../sale-sign.jpg');
+    background-size: contain;
+    position: relative;
+    top:-180px;
+    margin:-80px 0 0 30px;
+}
+.popular{
+    width:80px;
+    float:left;
+    height:60px;
+    background: url('../popular.png') no-repeat;
+    background-size: contain;
+    position: relative;
+    top:-180px;
+    margin:-80px 0 0 30px;
+}
+.img{
+    width:295px;
+    height:295px;
 }

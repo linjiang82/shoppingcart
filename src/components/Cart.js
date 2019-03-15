@@ -50,7 +50,6 @@ class Cart extends Component {
                 <Link to='/viewcart' className='cart'><button>View Cart</button></Link>
             </div>
             <Route exact path='/viewcart' children={( { match,  ...rest} )=>{
-                console.log(...rest);
                 return (match && <ViewCart cartDetail={cartDetail} {...rest} /> )
             }
             } />

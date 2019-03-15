@@ -1,0 +1,101 @@
+[
+    {
+    "id": 1,
+    "name": "Ipad",
+    "qty": 20,
+    "price": 100,
+    "src":"../ipad.jpg",
+    "limit":15,
+    "popular":true,
+    "special":true,
+    "category":"Tablet"
+},
+{
+    "id": 2,
+    "name": "Iphone",
+    "qty": 15,
+    "price": 500,
+    "src":"../iphone.jpg",
+    "limit":10,
+    "popular":true,
+    "special":false,
+    "category":"Tablet"
+},
+{
+    "id": 3,
+    "name": "MBP",
+    "qty": 10,
+    "price": 1000,
+    "src":"../mbp.jpg",
+    "limit":8,
+    "popular":false,
+    "special":true,
+    "category":"Computer"
+},
+    {
+    "id": 4,
+    "name": "Photoframe",
+    "qty": 20,
+    "price": 100,
+    "src":"../ipad.jpg",
+    "limit":15,
+    "popular":true,
+    "special":true,
+    "category":"Photography"
+},
+{
+    "id": 5,
+    "name": "USB Stick",
+    "qty": 15,
+    "price": 500,
+    "src":"../iphone.jpg",
+    "limit":10,
+    "popular":true,
+    "special":false,
+    "category":"Accessories"
+},
+{
+    "id": 6,
+    "name": "Speaker",
+    "qty": 10,
+    "price": 1000,
+    "src":"../mbp.jpg",
+    "limit":8,
+    "popular":false,
+    "special":true,
+    "category":"Accessories"
+},
+    {
+    "id": 7,
+    "name": "Headphone",
+    "qty": 20,
+    "price": 100,
+    "src":"../ipad.jpg",
+    "limit":15,
+    "popular":true,
+    "special":true,
+    "category":"Accessories"
+},
+{
+    "id": 8,
+    "name": "Thinkpad",
+    "qty": 15,
+    "price": 500,
+    "src":"../iphone.jpg",
+    "limit":10,
+    "popular":true,
+    "special":false,
+    "category":"Computer"
+},
+{
+    "id": 9,
+    "name": "MBP",
+    "qty": 10,
+    "price": 1000,
+    "src":"../mbp.jpg",
+    "limit":8,
+    "popular":false,
+    "special":true,
+    "category":"Tablet"
+}
+]

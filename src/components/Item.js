@@ -5,10 +5,12 @@ import mbp from '../mbp.jpg';
 import iphone from '../iphone.jpg';
 import ipad from '../ipad.jpg';
 
-const Item = ({id, name, qty, price, src, onClick}) => {
+const Item = ({id, name, qty, price, src, onClick, isSpe=false, isPop=false}) => {
     return (
-        <div key={id} className='item'>
-            <img src={src} />
+        <div className='item'>
+            <img className='img' src={src}/>
+            {isSpe?<div className='special'></div>:null}
+            {isPop?<div className='popular'></div>:null}
             <div className='description'>
                 <p>${price}</p>
                 <p>{name+' '+qty}</p>

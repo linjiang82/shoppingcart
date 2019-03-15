@@ -1,6 +1,8 @@
 .proCtn{
+    grid-column: 1 / -1;
+    margin: 0 auto;
     display:flex;
-    justify-content:center;
     flex-wrap:wrap;
+    justify-content:space-between;
 }
 

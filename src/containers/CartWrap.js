@@ -5,7 +5,6 @@ import {changeQty} from '../actions/userActions';
 import {delItem} from '../actions/userActions';
 
 const mapStateToProps = (state) => {
-    console.log(state.cart)
     return {
         cart:state.cart,
     }

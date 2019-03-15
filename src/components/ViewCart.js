@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import {Button} from 'react-bootstrap';
 
 let ViewCart = (props) =>{ 
-    console.log(props) ;
     return(<div className='viewCart'>
         <div>
             {/*go backk to / ATM, will goback to history last entry*/}
