@@ -15,27 +15,23 @@ const proListReducer = (state=initState,action) =>{
         ...state,
         loading:true
       }
-      break;
     case 'getProListSuccess':
       return state = {
         ...state,
         loading:false,
         prolist:action.payload
       }
-      break;
     case 'getProListError':
       return state = {
         ...state,
         loading:false,
         error:action.payload
       }
-      break;
       case 'filterPro':
       return state = {
               ...state,
               searchKeyword:action.keyword
           }
-      break;
       case 'selectCat':
       let keyword=action.keyword.split(':');
       if(keyword[0] in state.categoryKeyword) {  
@@ -56,7 +52,6 @@ const proListReducer = (state=initState,action) =>{
                 [keyword[0]]:[keyword[1]]}
         }
       }
-      break;
       case 'delSelectCat':
       {
       let keyword = action.keyword.split(' ');
@@ -68,7 +63,6 @@ const proListReducer = (state=initState,action) =>{
               ...state,
               categoryKeyword: restKeyword
               }
-      break;
         }
   
     default:

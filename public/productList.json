@@ -2,36 +2,36 @@
   {
     "cat-title":"Clothes",
     "sub-cat":[
-      {"sub-cat-title":"Skirt",
+      {"sub-cat-title":"Men",
         "children":[
-          "lianyiqun",
-          "duanqun",
-          "banshenqun",
-          "loubeiqun"
+          "Suit",
+          "Casual",
+          "Sports",
+          "Undies"
         ]
       },
-      {"sub-cat-title":"Skirt1",
+      {"sub-cat-title":"Women",
         "children":[
-          "lianyiqun",
-          "duanqun",
-          "banshenqun",
-          "loubeiqun"
+          "Suit",
+          "Casual",
+          "Sports",
+          "Undies"
         ]
       },
-      {"sub-cat-title":"Skirt2",
+      {"sub-cat-title":"Kids",
         "children":[
-          "lianyiqun",
-          "duanqun",
-          "banshenqun",
-          "loubeiqun"
+          "Suit",
+          "Casual",
+          "Sports",
+          "Undies"
         ]
       },
-      {"sub-cat-title":"Skirt3",
+      {"sub-cat-title":"Babies",
         "children":[
-          "lianyiqun",
-          "duanqun",
-          "banshenqun",
-          "loubeiqun"
+          "Spring",
+          "Summer",
+          "Autumn",
+          "Winter"
         ]
       }
     ]
@@ -50,26 +50,26 @@
       },
       {"sub-cat-title":"Huawei",
         "children":[
-          "lianyiqun",
-          "duanqun",
-          "banshenqun",
-          "loubeiqun"
+          "Phone",
+          "Tablet",
+          "Router",
+          "Accessories"
         ]
       },
       {"sub-cat-title":"Samsung",
         "children":[
-          "lianyiqun",
-          "duanqun",
-          "banshenqun",
-          "loubeiqun"
+          "Phone",
+          "Tablet",
+          "TV",
+          "Appliance"
         ]
       },
       {"sub-cat-title":"Nokia",
         "children":[
-          "lianyiqun",
-          "duanqun",
-          "banshenqun",
-          "loubeiqun"
+          "Phone",
+          "Router",
+          "Battery",
+          "Accessories"
         ]
       }
     ]
