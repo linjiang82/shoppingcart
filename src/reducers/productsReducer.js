@@ -8,6 +8,9 @@ const productsReducer = (state = [], action) => {
       } else return { ...i };
     });
   }
+  else if(action.type === 'getProSuccess') {
+    return state = action.payload
+  }
   return state;
 };
 

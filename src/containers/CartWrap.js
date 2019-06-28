@@ -7,11 +7,13 @@ import {delItem} from '../actions/userActions';
 const mapStateToProps = (state) => {
     return {
         cart:state.cart,
+        products:state.products
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        dispatch,
         onChange : (e)=> {
         dispatch(changeQty(e))
         },
